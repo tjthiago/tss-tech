@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSS Tech - As últimas novidades em tecnologia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="financial-data-bar">
+        <div class="container">
+            <div class="currency-quotes">
+                <span id="usd-brl">USD/BRL: <span class="value"></span></span>
+                <span id="eur-brl">EUR/BRL: <span class="value"></span></span>
+                <span id="gbp-brl">GBP/BRL: <span class="value"></span></span>
+                <span id="jpy-brl">JPY/BRL: <span class="value"></span></span>
+            </div>
+            <div class="stock-market-data">
+                <span id="ibovespa">Ibovespa: <span class="value"></span></span>
+                <span id="sp500">S&P 500: <span class="value"></span></span>
+                <span id="nasdaq">Nasdaq: <span class="value"></span></span>
+                <span id="dow-jones">Dow Jones: <span class="value"></span></span>
+            </div>
+        </div>
+    </div>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <span class="neon-green">T</span>SS tech
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#noticias">Notícias</a></li>
+                    <li><a href="#videos">Vídeos</a></li>
+                    <li><a href="#fichas-tecnicas">Fichas Técnicas</a></li>
+                    <li><a href="#editorias">Editorias</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                    <li><a href="#apostas">Apostas</a></li>
+                </ul>
+            </nav>
+            <button id="open-login-modal" class="login-button"><i class="fas fa-user"></i> Entrar</button>
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="login-form-container">
+                <h2>Entrar</h2>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email ou Usuário:</label>
+                        <input type="text" id="login-email" name="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Senha:</label>
+                        <input type="password" id="login-password" name="login-password" required>
+                    </div>
+                    <button type="submit" class="submit-button"><span class="neon-green">E</span>ntrar</button>
+                </form>
+                <p>Não tem uma conta? <a href="#" id="open-register-form">Cadastre-se</a></p>
+            </div>
+    
+            <div id="register-form-container" style="display: none;">
+                <h2>Cadastrar</h2>
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="register-name">Nome:</label>
+                        <input type="text" id="register-name" name="register-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email:</label>
+                        <input type="email" id="register-email" name="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Senha:</label>
+                        <input type="password" id="register-password" name="register-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirmar Senha:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                    <button type="submit" class="submit-button"><span class="neon-green">C</span>adastrar</button>
+                </form>
+                <p>Já tem uma conta? <a href="#" id="open-login-form">Faça login</a></p>
+            </div>
+        </div>
+    </div>
+    </header>
+
+    <section id="banner" class="banner">
+        <div class="banner-slider">
+            <div class="slide">
+                <img src="banner6" alt="Banner Imagem 1">
+            </div>
+            <div class="slide">
+                <img src="banner7.jpg" alt="Banner Imagem 2">
+            </div>
+            <div class="slide">
+                <img src="banner8.png" alt="Banner Imagem 3">
+            </div>
+            </div>
+        <div class="banner-controls">
+            <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <main class="container">
+        <section id="noticias" class="latest-news">
+            <h2><span class="neon-green">N</span>otícias</h2>
+            <div class="news-grid">
+                <div class="news-item">
+                    <img src="tendencias1.png" alt="Novo Smartphone da Empresa X">
+                    <h3>Empresa X Lança o Inovador Smartphone Y com Câmera de 200MP</h3>
+                    <p>A gigante da tecnologia Empresa X acaba de anunciar seu mais recente flagship, o smartphone Y. O dispositivo vem equipado com uma câmera revolucionária de 200 megapixels, prometendo fotos com detalhes incríveis. Além disso, conta com um novo processador AI e tela AMOLED de 120Hz. Confira todos os detalhes!</p>
+                    <a href="#" class="neon-green">Leia mais</a>
+                </div>
+                <div class="news-item">
+                    <img src="img2.png" alt="Avanços na Inteligência Artificial">
+                    <h3>Pesquisadores Desenvolvem Nova IA Capaz de Traduzir Pensamentos em Texto</h3>
+                    <p>Cientistas de uma renomada universidade anunciaram um avanço significativo na área da inteligência artificial. Eles desenvolveram um sistema que, através de ondas cerebrais, consegue traduzir pensamentos diretamente em texto. Essa tecnologia tem o potencial de revolucionar a comunicação para pessoas com dificuldades de fala.</p>
+                    <a href="#" class="neon-green">Leia mais</a>
+                </div>
+                <div class="news-item">
+                    <img src="img3.png" alt="Realidade Virtual no Metaverso">
+                    <h3>Metaverso da Empresa Z Abre Acesso Antecipado com Experiências de Realidade Virtual Imersivas</h3>
+                    <p>A Empresa Z está dando os primeiros passos para o seu tão aguardado metaverso. Usuários selecionados já estão tendo a oportunidade de experimentar ambientes virtuais imersivos, com interações sociais, jogos e eventos exclusivos. A empresa promete um futuro onde o virtual e o real se মিশেল.</p>
+                    <a href="#" class="neon-green">Leia mais</a>
+                </div>
+                <div class="news-item">
+                    <img src="img4.png" alt="Carros Elétricos Mais Acessíveis">
+                    <h3>Governo Anuncia Incentivos Fiscais para a Compra de Carros Elétricos</h3>
+                    <p>Uma ótima notícia para quem sonha em ter um carro elétrico! O governo federal anunciou um pacote de incentivos fiscais que visa tornar os veículos elétricos mais acessíveis à população. A medida inclui redução de impostos e linhas de crédito especiais. Saiba mais sobre como aproveitar essa oportunidade.</p>
+                    <a href="#" class="neon-green">Leia mais</a>
+                </div>
+            </div>
+            <button class="load-more-btn"><span class="neon-green">C</span>arregar Mais Notícias</button>
+        </section>
+
+        <section id="videos" class="videos-section">
+            <h2><span class="neon-green">V</span>ídeos</h2>
+            <div class="video-grid">
+                <div class="video-item">
+                    <h3>Aprenda a Programar em Python do Zero: Guia para Iniciantes</h3>
+                    <video controls poster="video1.mp4">
+                        <source src="video1.mp4" type="video/mp4">
+                        <source src="video1.mp4" type="video/webm">
+                        Seu navegador não suporta vídeos HTML5.
+                    </video>
+                    <p>Quer começar a programar mas não sabe por onde começar? Neste tutorial passo a passo, te ensinamos os fundamentos da linguagem Python, uma das mais populares e versáteis do mundo da tecnologia.</p>
+                </div>
+                <div class="video-item">
+                    <h3>O Impacto da Inteligência Artificial no Futuro do Trabalho</h3>
+                    <video controls poster="video2.mp4">
+                        <source src="video2.mp4" type="video/mp4">
+                        <source src="video2.mp4" type="video/webm">
+                        Seu navegador não suporta vídeos HTML5.
+                    </video>
+                    <p>Explore como a inteligência artificial está transformando o mercado de trabalho, as habilidades que serão mais demandadas e os desafios éticos que essa evolução nos apresenta. Uma análise essencial para entender o futuro profissional.</p>
+                </div>
+                </div>
+            <button class="load-more-btn"><span class="neon-green">C</span>arregar Mais Vídeos</button>
+        </section>
+
+        <section id="fichas-tecnicas" class="tech-specs-section">
+            <h2><span class="neon-green">F</span>ichas Técnicas</h2>
+            <div class="tech-specs-grid">
+                <div class="tech-spec-card">
+                    <img src="tel1.png" alt="Smartphone Y">
+                    <h3>Smartphone Y</h3>
+                    <ul>
+                        <li><strong>Processador:</strong> Snapdragon 8 Gen 3</li>
+                        <li><strong>RAM:</strong> 12GB LPDDR5X</li>
+                        <li><strong>Tela:</strong> AMOLED 6.8" 120Hz</li>
+                        <li><strong>Câmera Principal:</strong> 200MP + 12MP (ultrawide) + 10MP (telefoto)</li>
+                        <li><strong>Armazenamento:</strong> 256GB UFS 4.0</li>
+                        <li><strong>Bateria:</strong> 5000 mAh com carregamento rápido de 120W</li>
+                    </ul>
+                    <a href="#" class="neon-green">Ver Ficha Completa</a>
+                </div>
+                <div class="tech-spec-card">
+                    <img src="cel2.png" alt="Notebook Z">
+                    <h3>Notebook Z</h3>
+                    <ul>
+                        <li><strong>Processador:</strong> Intel Core i7-14700HX</li>
+                        <li><strong>RAM:</strong> 32GB DDR5</li>
+                        <li><strong>Tela:</strong> IPS 16" QHD+ 165Hz</li>
+                        <li><strong>Placa de Vídeo:</strong> NVIDIA GeForce RTX 4070</li>
+                        <li><strong>Armazenamento:</strong> 1TB SSD NVMe</li>
+                        <li><strong>Sistema Operacional:</strong> Windows 11 Pro</li>
+                    </ul>
+                    <a href="#" class="neon-green">Ver Ficha Completa</a>
+                </div>
+                <div class="tech-spec-card">
+                    <img src="cel3.png" alt="Smartwatch W">
+                    <h3>Smartwatch W</h3>
+                    <ul>
+                        <li><strong>Tela:</strong> AMOLED 1.4"</li>
+                        <li><strong>Bateria:</strong> Até 7 dias de duração</li>
+                        <li><strong>Resistência:</strong> 5 ATM à prova d'água</li>
+                        <li><strong>Sensores:</strong> Frequência cardíaca, SpO2, GPS</li>
+                        <li><strong>Conectividade:</strong> Bluetooth 5.2, Wi-Fi</li>
+                        <li><strong>Recursos:</strong> Monitoramento de sono, notificações, controle de música</li>
+                    </ul>
+                    <a href="#" class="neon-green">Ver Ficha Completa</a>
+                </div>
+                </div>
+            <button class="load-more-btn"><span class="neon-green">C</span>arregar Mais Fichas</button>
+        </section>
+
+        <section id="editorias" class="editorial-section">
+    <h2><span class="neon-green">E</span>ditorias</h2>
+    <div class="editorial-category">
+        <h3><span class="neon-green">S</span>martphones</h3>
+        <div class="editorial-grid">
+            <div class="editorial-item">
+                <img src="guia1.png">
+                <h4>Guia de Compras: Os Melhores Smartphones Top de Linha de 2025</h4>
+                <p>Está procurando o smartphone mais potente e com os recursos mais avançados do mercado? Preparamos um guia completo com os melhores modelos disponíveis em 2025, analisando desempenho, câmera, design e muito mais.</p>
+                <a href="#" class="neon-green">Leia o Artigo</a>
+            </div>
+            <div class="editorial-item">
+                <img src="guia2.png" alt="Bateria de Smartphones">
+                <h4>Bateria que Dura o Dia Todo: Dicas para Otimizar o Uso do seu Smartphone</h4>
+                <p>Cansado de ficar sem bateria no meio do dia? Confira nossas dicas e truques para otimizar o uso da bateria do seu smartphone e garantir que ele dure muito mais tempo.</p>
+                <a href="#" class="neon-green">Leia o Artigo</a>
+            </div>
+            </div>
+    </div>
+
+    <div class="editorial-category">
+        <h3><span class="neon-green">N</span>otebooks</h3>
+        <div class="editorial-grid">
+            <div class="editorial-item">
+                <img src="not1.png" alt="Melhores Notebooks para Trabalho Remoto">
+                <h4>Trabalho Remoto Produtivo: Os Melhores Notebooks para Home Office em 2025</h4>
+                <p>Com o crescimento do trabalho remoto, ter um notebook eficiente e confortável é essencial. Listamos os melhores modelos para diferentes necessidades e orçamentos.</p>
+                <a href="#" class="neon-green">Leia o Artigo</a>
+            </div>
+            </div>
+    </div>
+
+    <div class="editorial-category">
+        <h3><span class="neon-green">I</span>nteligência Artificial</h3>
+        <div class="editorial-grid">
+            <div class="editorial-item">
+                <img src="not2.png" alt="O Futuro da IA">
+                <h4>O Impacto da Inteligência Artificial em Diversas Indústrias</h4>
+                <p>Explore como a inteligência artificial está transformando setores como saúde, finanças, educação e transporte, e quais são as perspectivas para o futuro.</p>
+                <a href="#" class="neon-green">Leia o Artigo</a>
+            </div>
+        </div>
+    </div>
+
+    <section id="ofertas" class="offers-section">
+        <h2><span class="neon-green">O</span>fertas</h2>
+        <div class="offers-grid">
+            <div class="offer-item">
+                <img src="oferta1.png" alt="Smartphone Y em Oferta">
+                <h3>Smartphone Y (256GB, Preto)</h3>
+                <p class="price"><span class="original-price">R$ 4.599,99</span> <span class="discounted-price neon-green">R$ 3.999,99</span></p>
+                <a href="#" class="offer-link"><span class="neon-green">Ver Oferta</span></a>
+            </div>
+            <div class="offer-item">
+                <img src="oferta2.png" alt="Notebook Z com Desconto">
+                <h3>Notebook Z (i7, 32GB RAM, 1TB SSD)</h3>
+                <p class="price"><span class="original-price">R$ 8.999,99</span> <span class="discounted-price neon-green">R$ 7.999,99</span></p>
+                <a href="#" class="offer-link"><span class="neon-green">Ver Oferta</span></a>
+            </div>
+            <div class="offer-item">
+                <img src="oferta3.png" alt="Smartwatch W com Preço Especial">
+                <h3>Smartwatch W (Pulseira de Silicone, Cinza)</h3>
+                <p class="price"><span class="original-price">R$ 799,99</span> <span class="discounted-price neon-green">R$ 649,99</span></p>
+                <a href="#" class="offer-link"><span class="neon-green">Ver Oferta</span></a>
+            </div>
+            <div class="offer-item">
+                <img src="oferta4.png" alt="Fones de Ouvido Sem Fio com Promoção">
+                <h3>Fones de Ouvido Sem Fio (Cancelamento de Ruído)</h3>
+                <p class="price"><span class="original-price">R$ 349,99</span> <span class="discounted-price neon-green">R$ 279,99</span></p>
+                <a href="#" class="offer-link"><span class="neon-green">Ver Oferta</span></a>
+            </div>
+            </div>
+        <button class="load-more-btn"><span class="neon-green">C</span>arregar Mais Ofertas</button>
+    </section>
+
+        <section id="apostas" class="predictions-section">
+            <h2><span class="neon-green">A</span>postas</h2>
+            <div class="prediction-item">
+                <h3><span class="neon-green">P</span>revisão: O Futuro da Realidade Virtual</h3>
+                <p>Um artigo detalhado sobre as tendências e o futuro da realidade virtual, com análises e previsões de especialistas...</p>
+                <img src="aposta1.png" alt="Imagem Previsão RV">
+                <a href="#" class="neon-green">Leia a Análise Completa</a>
+            </div>
+            <div class="prediction-item">
+                <h3><span class="neon-green">A</span>nálise: Impacto da IA no Mercado de Trabalho</h3>
+                <p>Uma análise aprofundada sobre como a inteligência artificial está transformando o mercado de trabalho e as profissões do futuro...</p>
+                <img src="aposta2.png" alt="Imagem Análise IA">
+                <a href="#" class="neon-green">Leia a Análise Completa</a>
+            </div>
+            </section>
+
+        <section class="contact-us" id="contact">
+            <h2><span class="neon-green">C</span>ontato</h2>
+            <p>Entre em contato conosco para dúvidas ou sugestões.</p>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button"><span class="neon-green">E</span>nviar Mensagem</button>
+                <div id="form-message" class="form-message"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 TSS tech. Todos os direitos reservados.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top-btn"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+    <div class="breaking-news-bar">
+        <div class="breaking-news-container">
+            <span class="breaking-news-label"><i class="fas fa-newspaper"></i> ÚLTIMAS NOTÍCIAS </span>
+            <div class="ticker-wrapper">
+                <div class="breaking-news-ticker">
+                    <a href="#" class="breaking-news-item">Atenção: Grande evento de tecnologia anunciado para o próximo mês.</a>
+                    <a href="#" class="breaking-news-item">Mercado de ações reage positivamente a novos dados econômicos.</a>
+                    <a href="#" class="breaking-news-item">Confira os destaques da última atualização do seu software favorito.</a>
+                    <a href="#" class="breaking-news-item">Análise: O futuro dos carros elétricos no Brasil.</a>
+                    <a href="#" class="breaking-news-item">Novidades sobre a exploração espacial.</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
